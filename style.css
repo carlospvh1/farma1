@@ -1,0 +1,584 @@
+/* ========== RESET E GERAIS ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: hsl(0, 0%, 100%);
+  padding-top: 150px; /* Evita sobreposição com o header fixo */
+}
+
+/* ========== TOPO - BARRA DE AVISO SCROLL ========== */
+.top-bar {
+  background-color: rgb(3, 61, 122);
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height: 30px;
+}
+
+.scroll-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 25s linear infinite;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ========== HEADER FIXO COM LOGO E SELO ========== */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 900;
+  background-color: hsl(0, 0%, 92%);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #ffffff;
+  padding: 0;
+}
+
+.logo {
+  height: 80px;
+  margin-top: 50px;
+  margin-left: 1cm;
+}
+
+.selo-seguro {
+  margin-top: 30px;
+  margin-right: 4cm;
+  height: 30px;
+  max-width: 100%;
+}
+
+/* ========== BANNERS ROTATIVOS ========== */
+.banner-container {
+  position: relative;
+  height: auto;
+  min-height: 19px; /* ajuste conforme necessário */
+}
+
+.banner {
+  position: absolute;
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 1s ease-in-out;
+}
+
+.banner.active {
+  opacity: 1;
+  z-index: 1;
+  display: block;
+}
+
+/* ========== BOTÃO WHATSAPP ========== */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-float:hover {
+  background-color: #128c7e;
+}
+
+/* ========== CARDS DE SERVIÇOS ========== */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  background: #05830780;
+  padding: 10px;
+}
+
+.card-content h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.card-content p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.card-content button {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.card-content button:hover {
+  background-color: #ddd;
+}
+
+/* ========== TÍTULO DA SESSÃO CONTINUAÇÃO ========== */
+.titulo-continuar {
+  width: 80%;
+  max-width: 70cm;
+  margin: 15cm auto 10px auto;
+  text-align: left;
+}
+
+.titulo-continuar h2 {
+  font-size: 28px;
+  color: rgb(3, 61, 122);
+  font-weight: 700;
+}
+
+/* ========== QUEM SOMOS ========== */
+.quem-somos {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quem-somos-container {
+  max-width: 1000px;
+  text-align: center;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quem-somos-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: rgb(3, 61, 122);
+}
+
+.quem-somos-container p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* ========== BANNER EXTRA ========== */
+.banner-extra {
+  width: 100%;
+}
+
+.banner-extra-container {
+  width: 100%;
+}
+
+.banner-extra-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========== QUALIDADE DOS PRODUTOS ========== */
+.qualidade-produtos {
+  background-color: hwb(75 89% 3%);
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qualidade-container {
+  max-width: 1100px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.qualidade-container h2 {
+  font-size: 2rem;
+  color: rgb(3, 61, 122);
+  margin-bottom: 25px;
+}
+
+.qualidade-container p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+/* ========== FAQ ========== */
+.faq {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(3, 61, 122);
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 10px;
+  cursor: pointer;
+  color: #333;
+  position: relative;
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 1.5rem;
+}
+
+.faq-question.active::after {
+  content: '-';
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 10px 15px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ========== SUPORTE AO CLIENTE ========== */
+.suporte-cliente {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  text-align: justify;
+  border-top: 3px solid #2a2a2a;
+}
+
+.suporte-cliente .container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.suporte-cliente h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: rgb(3, 61, 122);
+  text-align: center;
+}
+
+.suporte-cliente p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.botao-suporte {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  background-color: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.botao-suporte:hover {
+  background-color: #444;
+}
+
+/* ========== RODAPÉ ========== */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(3, 61, 122);
+  color: white;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-col p,
+.footer-col ul,
+.footer-col li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.botao-receita {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #000000;
+  color: #006d78;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.botao-receita:hover {
+  background-color: hsl(0, 0%, 56%);
+}
+
+/* ========== BANNER DE COOKIES ========== */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(3, 61, 122);
+  color: white;
+  padding: 8px 8px;
+  text-align: center;
+  font-size: 14px;
+  z-index: 1000;
+  display: none;
+}
+
+#cookie-banner a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#cookie-banner button {
+  background-color: #ffffff;
+  color: rgb(3, 61, 122);
+  border: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+#cookie-banner button:hover {
+  background-color: hwb(155 87% 9%);
+}
+
+/* ========== RESPONSIVIDADE PARA SMARTPHONES ========== */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo {
+    height: 70px;
+    margin: 10px 0;
+    margin-left: 0;
+  }
+
+
+  .selo-seguro {
+    position: absolute;
+    top: 10px;
+    right: -150px;
+    height: 20px;
+  }
+    .titulo-continuar {
+    margin-top: 21rem;
+    width: 90%;
+  }
+
+  .titulo-continuar h2 {
+    font-size: 22px;
+  }
+  
+
+  /* Banner específico para mobile */
+  .banner-container img:nth-child(1) {
+    content: url('images/banner002.PNG'); /* Banner principal mobile */
+  }
+
+  .banner-container img:nth-child(2) {
+    content: url('images/banner001.png'); /* Segundo banner mobile */
+  }
+  .banner-extra-container img {
+    content: url('images/banercel.png');
+  }
+  .scroll-text {
+    font-size: 14px;
+  }
+}
+.secao-atendimento {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.btn-solicitar {
+  background-color: #25d366; /* verde WhatsApp */
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-solicitar:hover {
+  background-color: #1ebe5b;
+}
+
+.fale-com-alice {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  max-width: 400px;
+  margin: 5px auto;
+  font-family: Arial, sans-serif;
+}
+
+.fale-com-alice .conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.fale-com-alice .texto {
+  flex: 1;
+}
+
+.fale-com-alice h2 {
+  color: #007f73;
+  font-size: 18px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.fale-com-alice p {
+  font-size: 14px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.fale-com-alice .btn-chat,
+.fale-com-alice .btn-whatsapp {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.fale-com-alice .btn-chat {
+  background-color: #007f73;
+  color: white;
+}
+
+.fale-com-alice .btn-whatsapp {
+  background-color: #25D366;
+  color: white;
+}
+
+.fale-com-alice .avatar {
+  width: 170px;
+  height: auto;
+}
+
+     .pagamento {
+      background-color: #fff;
+      text-align: center;
+      padding:5px;
+    }
+
+.pagamento img {
+
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
